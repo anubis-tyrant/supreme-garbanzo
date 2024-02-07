@@ -8,7 +8,7 @@ import { useState } from 'react'
 
 import Factorial from './components/Factorial'
 import Fibonacci from './components/Fibonacci'
-import OddEven from './components/oddeven'
+import OddEven from './components/OddEven'
 import Arithematic from './components/Arithematic'
 
 
