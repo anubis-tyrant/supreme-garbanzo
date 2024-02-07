@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap');
+
+/* Set height of the whole page */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+#root {
+  height: 100%;
+}
+
+/* Style for the header */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the hamburger button */
+.menu-toggler {
+  margin-right: 10px;
+}
+
+.menu-toggler button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+.menu-toggler button:hover {
+  background-color: #555;
+}
+
+/* Style for the sidebar */
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 10px;
+  width: 20%;
+  float: left;
+  height: 100%;
+  position: absolute;
+}
+
+/* Style for the content */
+.content {
+  height: 100%;
+  padding: 10px;
+  /* margin-left: 20%; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Style for menu items */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .menu-toggler {
+    display: block;
+  }
+
+  .menu-toggler button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+
+  .menu-toggler button:hover {
+    background-color: #555;
+  }
+
+  .menu-toggler.active + .sidebar {
+    display: block;
+  }
+}
+
+
+.output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.output > input {
+  width: 200px;
+  text-align: center;
+}
+
+.form-control:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
